@@ -61,7 +61,216 @@
         <p>Si por el contrario quieres que diseñemos tu objeto, indícalo en el formulario y nos pondremos en contacto contigo para desarrollar tu idea.</p>
       </article>
       <article class="large-6 columns">
-        <form> <div class="row"> <div class="large-12 columns"> <label>Input Label</label> <input type="text" placeholder="large-12.columns" /> </div> </div> <div class="row"> <div class="large-4 columns"> <label>Input Label</label> <input type="text" placeholder="large-4.columns" /> </div> <div class="large-4 columns"> <label>Input Label</label> <input type="text" placeholder="large-4.columns" /> </div> <div class="large-4 columns"> <div class="row collapse"> <label>Input Label</label> <div class="small-9 columns"> <input type="text" placeholder="small-9.columns" /> </div> <div class="small-3 columns"> <span class="postfix">.com</span> </div> </div> </div> </div> <div class="row"> <div class="large-12 columns"> <label>Select Box</label> <select> <option value="husker">Husker</option> <option value="starbuck">Starbuck</option> <option value="hotdog">Hot Dog</option> <option value="apollo">Apollo</option> </select> </div> </div> <div class="row"> <div class="large-6 columns"> <label>Choose Your Favorite</label> <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label> <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label> </div> <div class="large-6 columns"> <label>Check these out</label> <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label> <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label> </div> </div> <div class="row"> <div class="large-12 columns"> <label>Textarea Label</label> <textarea placeholder="small-12.columns"></textarea> </div> </div> </form>
+        <!--
+        <form>
+        <div class="row">
+        	<div class="large-12 columns">
+            	<label>Input Label</label> <input type="text" placeholder="large-12.columns" /> </div>
+         </div>
+        <div class="row">
+            <div class="large-4 columns">
+                <label>Input Label</label> <input type="text" placeholder="large-4.columns" /> </div>
+            <div class="large-4 columns">
+            	<label>Input Label</label> <input type="text" placeholder="large-4.columns" /> </div>
+            <div class="large-4 columns">
+            	<div class="row collapse"> 
+                	<label>Input Label</label>
+                    <div class="small-9 columns">
+                    	<input type="text" placeholder="small-9.columns" /> </div>
+                    <div class="small-3 columns"> <span class="postfix">.com</span> </div> </div> </div> </div>
+         <div class="row">
+         	<div class="large-12 columns">
+            	<label>Select Box</label> 
+                	<select>
+                    	<option value="husker">Husker</option>
+                        <option value="starbuck">Starbuck</option>
+                        <option value="hotdog">Hot Dog</option>
+                        <option value="apollo">Apollo</option>
+                    </select> </div> </div>
+         <div class="row">
+         	<div class="large-6 columns">
+            	<label>Choose Your Favorite</label>
+                	<input type="radio" name="pokemon" value="Red" id="pokemonRed">
+                <label for="pokemonRed">Radio 1</label>
+                	<input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+                <label for="pokemonBlue">Radio 2</label> </div>
+            <div class="large-6 columns">
+            	<label>Check these out</label> 
+                	<input id="checkbox1" type="checkbox">
+                <label for="checkbox1">Checkbox 1</label>
+                	<input id="checkbox2" type="checkbox">
+                <label for="checkbox2">Checkbox 2</label> </div> </div>
+        <div class="row">
+        	<div class="large-12 columns"> 
+            	<label>Textarea Label</label> 
+                	<textarea placeholder="small-12.columns"></textarea> </div> </div>
+        </form>-->
+      
+      
+      <!--OTRO FORMULARIO-->
+      
+      <form name="contactform" method="post" action="contacto.php" enctype="multipart/form-data" onsubmit="return validateForm()">
+      <!--<form method="POST" name="contacto.php" onsubmit="return validateForm()">--> 
+<p>
+<label for="title">Trato *</label>
+<select name="title">
+ <option value="0">Trato</option>
+ <option value="1">Señor</option>
+ <option value="2">Señora</option>
+ <option value="3">Señorita</option>
+ </select>
+</p>
+
+<p>
+<label for='name'>Name * </label>
+<input  type="text" name="first_name" maxlength="50" size="30" required="required">
+</p>
+<p>
+<label for="last_name">Apellidos *</label>
+<input  type="text" name="last_name" maxlength="50" size="30" required="required">
+</p>
+
+<p>
+<label for='email'>Email *</label>
+<input type="text" name="email" >
+</p>
+<p>
+<label for="telephone">Número de teléfono *</label>
+<input  type="text" name="telephone" maxlength="30" size="30" required="required">
+</p>
+<p>
+<label for="comments">Detalles *</label>
+<textarea  name="comments" maxlength="100000" cols="25" rows="6"></textarea>
+</p>
+<p>
+<label for="file">Selecciona el archivo (solo STL)</label>
+<input type="file" name="file">
+</p>
+<input type="submit" value="Enviar" name='submit'>
+</form>
+      
+      <!--FIN OTRO FORMULARIO-->
+      
+      
+      <!--------------------------FORMULARIO NUEVO------------------------------>
+     
+     <!--<style>
+     label {
+			display:block;
+			margin-top:20px;
+			letter-spacing:1px;
+			}
+			
+.formulario {
+			display:block;
+			margin:0 auto;
+			width:510px;
+			color: #666666;
+			font-family:Arial;
+			}
+			
+form {
+		margin:0 auto;
+		width:400px;
+		}
+ 
+input, textarea, option {
+				width:380px;
+				height:27px;
+				background:#666666;
+				border:2px solid #f6f6f6;
+				padding:10px;
+				margin-top:5px;
+				font-size:10px;
+				color:#ffffff;
+				}
+ 
+textarea {
+    height:150px;
+}
+ 
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+     </style>-->
+     
+     <!--<form action="contacto.php" method="post">
+
+
+	<div class="row">
+    	<div class="large-12 columns">
+        	<label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre y Apellido" required="" />
+    	</div>
+	</div>
+ <label for="email">Email:</label>
+ <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" />
+ 
+ <label for="colores">Colores:</label>
+ <select id="colores" name="loscolores" placeholder="Selecciona un color" required="" >
+ 	<option value="rojo">Rojo</option>
+    <option value="verde">Verde</option>
+ </select>
+ <div class="row">
+     <div class="large-6 columns">
+     <label>Elige tu material favorito:</label>
+     <input type="radio" id="metal" name="material" value="metal">
+     <label for="metal">metal</label>
+     <input type="radio" id="plastico" name="material" value="plastico">
+      <label for="plastico">plástico</label>
+     
+     </div>
+ </div>
+ 
+ <input type="file" name="archivo">
+ <label for="mensaje">Mensaje:</label>
+ <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea>
+ <input id="submit" type="submit" name="submit" value="Enviar" />
+</form>-->
+
+      
+      <!--<form action="contacto.php" method="post">
+
+<div class="row">
+	<div class="large-12 columns">
+	<label for="nombre">Nombre:</label>
+ 	<input id="nombre" type="text" name="nombre" placeholder="Nombre y Apellido" required="" />
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+        <label for="color">Colores:</label>
+        <select id="color" name="color" placeholder="Colores" required="" />
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            
+        </select>
+ 	</div>
+ </div>
+ 
+ <div class="row">
+ 	<div class="large-4 columns">
+         <label for="email">Email:</label>
+         <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" />
+  	</div>
+ </div>
+ <div class="row">
+ 	<div class="large-12 columns">
+         <label for="mensaje">Mensaje:</label>
+         <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea>
+     </div>
+ </div>
+ <input id="submit" type="submit" name="submit" value="Enviar" />
+</form>-->
+<!-------------------------------------------------------->
+      
+      
       </article>
     </section>
 
